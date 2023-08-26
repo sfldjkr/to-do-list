@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Tiro+Devanagari+Hindi:ital@1&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <h1 style="margin: auto;">// To Do List</h1>
+        </div>
+        <div id="body">
+            <div id="sidebar">
+                <div class="plusIconDiv">
+                    <img class="plusToDo" src="./pluss.svg">
+                </div>
+                <button id="homeBtn">Home</button>
+                <button id="todayBtn">Today</button>
+                <button id="weekBtn">Week</button>
+                <button id="monthBtn">Month</button>
+                <button class="notesBtn">Notes</button>
+                <button id="showProjectBtn">Projects</button>
+                <div id="projectBtn" style="display:none;">
+                </div>
+            </div>
+            <div>
+                <div class="alllists">
+                </div>
+                <div class="allNotes">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <dialog id="favdialog">
+            <form method="dialog">
+                <button id="deatilcancelbtn" method="dialog">X</button>
+            </form>
+            <div class="detailsDiv">
+
+            </div>
+          </dialog>
+    </div>
+    <div>
+        <dialog id="notedialog">
+            <form method="dialog">
+                <button id="addNotesCancelBtn" value="cancel" method="dialog">X</button>
+            </form>
+            <form method="dialog">
+                <div class="noteForm">
+                    <div class="noteInputsDiv">
+                        <div>
+                            <input placeholder="Write Notes Here" class="noteInput" minlength="10" required></input>
+                        </div>
+                        <button class="noteSaveBtn">Save</button>
+                    </div>
+                </div>
+            </form>
+          </dialog>
+    </div>
+    <div>
+        <dialog id="toDoDialog">
+            <form method="dialog" class="cancelToDoFormDiv">
+                <button id="toDoCancelBtn" value="cancel" method="dialog">X</button>
+            </form>
+            <form method="dialog">
+                <div class="toDoForm">
+                        <div>
+                            <input placeholder="Project Name" class="projectName" minlength="3" required></input>
+                        </div>
+                        <div>
+                            <input placeholder="Task Name" class="taskName" minlength="3" required></input>
+                        </div>
+                        <div>
+                            <input placeholder="Note" class="toDoNote" minlength="3" required></input>
+                        </div>
+                        <div>
+                            <input class="calendarInput" type="date" placeholder="Due Date" required></input>
+                        </div>
+                        <div class="priorityDiv">
+                            <p>Select Your Priority:</p>
+                            <input type="radio" id="high" class="prorityLevel" name="priority" value="high" required>
+                              <label for="high">High</label><br>
+                              <input type="radio" id="medium" class="prorityLevel" name="priority" value="medium" required>
+                              <label for="medium">Mid</label><br>
+                              <input type="radio" id="low" class="prorityLevel" name="priority" value="low" required>
+                              <label for="low">Low</label>
+                            
+                        </div>
+                        <button class="toDoSaveBtn">Save</button>
+                </div>
+            </form>
+          </dialog>
+    </div>
+<!--  -->
+<dialog id="editToDoDialog">
+    <form method="dialog" class="cancelToDoFormDiv">
+        <button id="toDoCancelBtn" value="cancel" method="dialog">X</button>
+    </form>
+    <form method="dialog">
+        <div class="toDoForm">
+                <div>
+                    <input placeholder="Project Name" class="editprojectName" minlength="3" required></input>
+                </div>
+                <div>
+                    <input placeholder="Task Name" class="edittaskName" minlength="3" required></input>
+                </div>
+                <div>
+                    <input placeholder="Note" class="edittoDoNote" minlength="3" required></input>
+                </div>
+                <div>
+                    <input class="editcalendarInput" type="date" placeholder="Due Date" required></input>
+                </div>
+                <div class="priorityDiv">
+                    <p>Select Your Priority:</p>
+                    <input type="radio" id="edithigh" class="editprorityLevel" name="priority" value="high" required>
+                      <label for="high">High</label><br>
+                      <input type="radio" id="editmedium" class="editprorityLevel" name="priority" value="medium" required>
+                      <label for="medium">Mid</label><br>
+                      <input type="radio" id="editlow" class="editprorityLevel" name="priority" value="low" required>
+                      <label for="low">Low</label>
+                    
+                </div>
+                <div>
+                    <input type="hidden" class="hiddenHasCompleted">
+                </div>
+                <button class="edittoDoSaveBtn">Save</button>
+        </div>
+    </form>
+  </dialog>
+</div>
+
+</body>
+</html>
