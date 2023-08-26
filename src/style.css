@@ -1,0 +1,499 @@
+/* 
+#E7717D
+#C2CAD0
+#C2B9B0
+#7E685A
+#AFD275
+ */
+
+
+@keyframes rotateSpin {
+    0%   {rotate: 0deg;}
+    10%   {rotate: 25deg;}
+    20%   {rotate: 45eg;}
+    30%   {rotate: 55deg;}
+    40%   {rotate: 65deg;}
+    50%   {rotate: 90deg;}
+    60%   {rotate: 110deg;}
+    70%   {rotate: 130deg;}
+    80%   {rotate: 150deg;}
+    90%   {rotate: 170deg;}
+    100%   {rotate: 180deg;}
+}
+  
+
+* {
+    padding:0px;
+    margin:0px;
+    font-family:'Work Sans', sans-serif;
+}
+
+body {
+    background-color:#C2B9B0; /* #7E685A; */ /* #AFD275; */;
+}
+
+button {
+    font-family:'Work Sans', sans-serif;
+}
+
+input {
+    font-family:'Work Sans', sans-serif;
+}
+
+.carddiv {
+    border: 1px solid  #E7717D; /* #C2CAD0; */ /* #C2B9B0; */ /* #7E685A; */ /* #AFD275; */
+    padding: 10px 20px;
+    display:grid;
+    gap:15px;
+    grid-template-columns: auto 2fr repeat(4, auto);
+    align-items: center;
+    justify-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 30px;
+    gap:20px;
+    color:white;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 3vh;
+    background-color: #C2B9B0; /* #7E685A; */ /* #AFD275; */;
+
+}
+
+#body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+#sidebar {
+    padding: 10px;
+    padding-top: 10vh;
+
+    display: grid;
+    justify-content: center;
+    gap:5vh;
+    align-items: center;
+    align-content: start;
+    background-color: #C2B9B0;/* #7E685A; */ /* #AFD275; */;;
+}
+
+#sidebar > button {
+    border:none;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.alllists {
+    padding: 30px;
+    display: grid;
+    gap:2vh;
+    align-content: start;
+    background-color: #7E685A; /* #AFD275; */ ;
+}
+
+.alllists > div {
+    opacity: 0.7;
+    background-color: rgba(175, 210, 117,0.7); 
+}
+
+.alllists > div:hover {
+    box-shadow:rgba(83, 77, 77, 0.215) 0px 19px 38px, rgba(119, 109, 109, 0.22) 0px 7px 5px;;
+    transform: scale(1.01);
+    font-weight: bold;
+    opacity: 1;
+}
+
+
+
+.hascompletedbutton {
+    background-color: rgb(24, 223, 24);
+}
+
+.hasnotcompletedbutton {
+    background-color: rgb(238, 24, 24);
+}
+
+.detailBtn {
+    padding:5px 10px;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+}
+
+.detailBtn:hover {
+    background-color: #C2CAD0; /* #C2B9B0; */ /* #7E685A; */ /* #AFD275; */;
+    transform: scale(1.01);
+    font-weight: bold;
+
+}
+
+.deleteicon {
+    display: inline;
+    width:3vh;
+    height:auto;
+}
+
+.editicon {
+    display: inline;
+    width:3vh;
+    height:auto;
+}
+
+#favdialog::backdrop, #notedialog::backdrop {
+    background-color: rgba(194, 202, 208,0.3); /* #C2CAD0; */ /* #C2B9B0; */ /* #7E685A; */ /* #AFD275; */;
+}
+
+.notebookicon {
+    display: inline;
+    width:5vh;
+    height:auto;
+}
+
+#favdialog {
+    border-radius: 10%;
+    border: none;
+    padding:10px;
+    margin: auto;
+    display:grid;
+    gap:5px;
+}
+
+#notedialog {
+    border-radius: 10%;
+    border: none;
+    padding:10px;
+    margin: auto;
+    display: grid;
+}
+
+#notedialog > form {
+    justify-self: end;
+}
+
+#favdialog > form {
+    justify-self: end;
+}
+
+#deatilcancelbtn, #addNotesCancelBtn {
+    border-radius: 80%;
+    padding:10px;
+    margin:auto;
+    border: none;
+    background-color: transparent;
+}
+
+#deatilcancelbtn:hover , #addNotesCancelBtn:hover{
+    transform: scale(1.07);
+    animation-name: rotateSpin;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.detailsDiv {
+    display:grid;
+    gap:7px;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+}
+
+.highpriority {
+    border-left: 10px solid  rgba(231, 113, 125,0.8); /* #C2CAD0; */ /* #C2B9B0; */ /* #7E685A; */ /* #AFD275; */;;;
+}
+
+.mediumpriority {
+    border-left: 10px solid rgba(21, 218, 21,0.8);
+}
+
+.lowpriority {
+    border-left: 10px solid rgba(235, 235, 34,0.8);
+}
+
+#sidebar > button:hover {
+    transform: scale(1.1);
+}
+
+#projectBtn {
+    display: grid;
+    gap:15px;
+}
+
+#projectBtn > button {
+    background-color: transparent;
+    font-size: 2vh;
+    border:none;
+}
+
+#projectBtn > button:hover {
+    transform: scale(1.01);
+    font-weight: bold;
+}
+
+.projectBtnDiv {
+    margin: auto;
+    text-align: center;
+}
+
+.projectBtnDiv > button {
+    background-color: transparent;
+    font-size: 2vh;
+    border:none;
+    margin:2vh 0px;
+}
+
+.projectBtnDiv > button:hover {
+    transform: scale(1.1);
+    font-weight: 100;
+}
+
+
+.notecard {
+    border: 1px solid grey; /* #C2CAD0; */ /* #C2B9B0; */ /* #7E685A; */ /* #AFD275; */;;
+}
+
+.allNotes {
+    display:grid;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.allNotes > div {
+    border-radius: 5%;
+    opacity: 0.7;
+    display:grid;
+    gap:10px;
+    padding:10px;
+    background-color: #E7717D; /* #C2CAD0; */ /* #C2B9B0; */ /* #7E685A; */ /* #AFD275; */;
+}
+
+.allNotes div > p {
+    padding: 10px 20px;
+}
+
+.allNotes > div > button {
+    background-color: transparent;
+    border: none;
+    justify-self: end;
+}
+
+.allNotes > div > button:hover {
+    transform: scale(1.1);
+    animation-name: rotateSpin;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.allNotes > div:hover {
+    box-shadow:rgba(83, 77, 77, 0.215) 0px 19px 38px, rgba(119, 109, 109, 0.22) 0px 7px 5px;
+    transform: scale(1.01);
+    font-weight:100;
+    opacity: 1;
+}
+
+#addNotesDiv {
+    box-shadow:none;
+    margin: auto;
+    padding:10px;
+    margin-bottom: 50px;
+    background-color: transparent;
+}
+
+#addNotesDiv:hover {
+    transform: scale(1);
+}
+
+.addNewNotesBtn {
+    background-color: transparent;
+    border:none;
+}
+
+.addNewNotesBtn:hover {
+    transform: scale(1.1);
+    font-weight: 100;
+    margin: auto;
+}
+
+.noteInput {
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 5px solid  #C2B9B0; /* #7E685A; */ /* #AFD275; */;
+    outline:white;
+}
+
+.noteInput::placeholder {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.noteInput:focus {
+    border:none;
+    outline:none;
+    transform: scale(1.03);
+}
+
+.noteInputsDiv {
+    text-align: center;
+    display:grid;
+    justify-items: stretch;
+    padding: 0px 10px;
+}
+
+.noteSaveBtn {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    display: block;
+    padding:5px;
+    background-color: rgba(127, 255, 212,0.6);
+    border:none;
+    letter-spacing: 3px;
+
+}
+
+.noteSaveBtn:hover {
+    transform: scale(1.05);
+    font-weight: bold;
+    background-color: rgba(127, 255, 212,0.8);
+}
+
+.noteForm {
+    display: grid;
+    gap:10px;
+}
+
+#notedialog {
+    padding:10px;
+    display:grid;
+    gap:10px;
+}
+
+
+/* To DO List FOrm Styles */
+.plusIconDiv {
+    text-align: center;
+}
+
+.plusToDo {
+    width: 8vh;
+    margin:auto;
+    height:auto;
+}
+
+.plusToDo:hover {
+    transform: scale(1.07);
+    animation-name: rotateSpin;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+
+
+#toDoDialog {
+    border-radius: 10%;
+    border: none;
+    padding:20px;
+    margin: auto;
+    display: grid;
+    gap:15px;
+
+}
+
+#editToDoDialog {
+    border-radius: 10%;
+    border: none;
+    padding:20px;
+    margin: auto;
+    display: grid;
+    gap:15px;
+
+}
+
+#toDoDialog::backdrop {
+    background-color:  rgba(194, 202, 208,0.3);
+}
+
+#editToDoDialog::backdrop {
+    background-color:  rgba(194, 202, 208,0.3);
+}
+
+.cancelToDoFormDiv {
+    justify-self: end;
+}
+
+#toDoCancelBtn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+#toDoCancelBtn:hover {
+    transform: scale(1.07);
+    font-weight: bolder;
+    animation-name: rotateSpin;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.toDoForm {
+    padding: 15px;
+}
+
+.toDoForm > div > input {
+    /* -webkit-appearance: none; */
+    margin:10px 0px;
+    outline: none;  
+    border:none;
+    border-bottom: 3px solid aquamarine;
+    opacity: 0.6;
+
+}
+.toDoForm > div > input:focus {
+    transform: scale(1.03);
+    opacity: 1;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    margin: 15px 0px;
+
+}
+.toDoForm > div > input::placeholder {
+    text-align:center;
+    outline: none;
+    font-weight: bold;
+}
+
+.toDoSaveBtn, .edittoDoSaveBtn {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: rgba(0, 255, 255,0.3);
+}
+
+.toDoSaveBtn:hover, .edittoDoSaveBtn:hover {
+    transform: scale(1.03);
+    font-weight: 100;
+    background-color: rgba(0, 255, 255,0.6);
+}
+
+.calendarInput {
+    width:100%;
+}
+
+
+.priorityDiv {
+    margin-top:10px;
+    text-align: center;
+    margin:auto;
+}
+
+.deleteicon:hover {
+    transform: scale(1.1);
+    fill:red!important;
+}
+
+.editicon:hover {
+    transform: scale(1.1);
+}
