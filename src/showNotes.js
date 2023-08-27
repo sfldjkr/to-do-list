@@ -1,3 +1,5 @@
+import plusSign from './pluss.svg'
+
 
 let addNotesFunc = () => {
     let addNoteBtn = document.querySelector('.addNewNotesBtn');
@@ -39,9 +41,10 @@ let showAllNotes = () => {
   
     let addNotesDiv = document.createElement('div');
     addNotesDiv.id = 'addNotesDiv';
-    let addNewNotesBtn = document.createElement('button');
+    let addNewNotesBtn = document.createElement('div');
     addNewNotesBtn.classList.add('addNewNotesBtn');
-    addNewNotesBtn.innerText = `Add Notes`;
+    addNewNotesBtn.id = "addNewNotesBtn";
+    addNewNotesBtn.innerHTML = `<img src="${plusSign}">`
     addNotesDiv.appendChild(addNewNotesBtn);
     allNotesContainer.appendChild(addNotesDiv);
     if (allNOtesObj === null ) {

@@ -4,10 +4,25 @@
 #C2B9B0
 #7E685A
 #AFD275
+  #EDCBD2, #80C4B7, #E3856B
  */
 
 
 @keyframes rotateSpin {
+    0%   {rotate: 0deg;}
+    10%   {rotate: 25deg;}
+    20%   {rotate: 45eg;}
+    30%   {rotate: 55deg;}
+    40%   {rotate: 65deg;}
+    50%   {rotate: 90deg;}
+    60%   {rotate: 110deg;}
+    70%   {rotate: 130deg;}
+    80%   {rotate: 150deg;}
+    90%   {rotate: 170deg;}
+    100%   {rotate: 180deg;}
+}
+
+@keyframes rotateSmall {
     0%   {rotate: 0deg;}
     10%   {rotate: 25deg;}
     20%   {rotate: 45eg;}
@@ -29,7 +44,7 @@
 }
 
 body {
-    background-color:#C2B9B0; /* #7E685A; */ /* #AFD275; */;
+    background-color:#AFD275; /* #7E685A; */ /* #AFD275; */;
 }
 
 button {
@@ -60,13 +75,13 @@ input {
     font-weight: bold;
     letter-spacing: 4px;
     font-size: 3vh;
-    background-color: #C2B9B0; /* #7E685A; */ /* #AFD275; */;
+    background-color:#EDCBD2, /* #7E685A; */ /* #AFD275; */;
 
 }
 
 #body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
 }
 
 #sidebar {
@@ -78,7 +93,7 @@ input {
     gap:5vh;
     align-items: center;
     align-content: start;
-    background-color: #C2B9B0;/* #7E685A; */ /* #AFD275; */;;
+    background-color:#80C4B7; /* #AFD275; */;;
 }
 
 #sidebar > button {
@@ -86,7 +101,7 @@ input {
     background-color: transparent;
     color: white;
     font-weight: bold;
-    font-size: 3vh;
+    font-size: 3vw;
 }
 
 .alllists {
@@ -94,12 +109,13 @@ input {
     display: grid;
     gap:2vh;
     align-content: start;
-    background-color: #7E685A; /* #AFD275; */ ;
+    background-color: #AFD275;
 }
 
 .alllists > div {
     opacity: 0.7;
-    background-color: rgba(175, 210, 117,0.7); 
+    background-color:#E3856B; 
+    font-size: 2vh;
 }
 
 .alllists > div:hover {
@@ -126,8 +142,9 @@ input {
 }
 
 .detailBtn:hover {
-    background-color: #C2CAD0; /* #C2B9B0; */ /* #7E685A; */ /* #AFD275; */;
-    transform: scale(1.01);
+    background-color:#C2CAD0;
+  
+    transform: scale(1.1);
     font-weight: bold;
 
 }
@@ -140,8 +157,8 @@ input {
 
 .editicon {
     display: inline;
-    width:3vh;
-    height:auto;
+    height:2.5vh;
+    width:auto;
 }
 
 #favdialog::backdrop, #notedialog::backdrop {
@@ -213,6 +230,10 @@ input {
     border-left: 10px solid rgba(235, 235, 34,0.8);
 }
 
+#sidebar {
+    padding: 30px 10px;
+}
+
 #sidebar > button:hover {
     transform: scale(1.1);
 }
@@ -224,7 +245,7 @@ input {
 
 #projectBtn > button {
     background-color: transparent;
-    font-size: 2vh;
+
     border:none;
 }
 
@@ -240,9 +261,11 @@ input {
 
 .projectBtnDiv > button {
     background-color: transparent;
-    font-size: 2vh;
+    font-size:2.5vh;
     border:none;
-    margin:2vh 0px;
+    color:white;
+    margin:1vh 0px;
+    padding:0.5vw;
 }
 
 .projectBtnDiv > button:hover {
@@ -252,7 +275,8 @@ input {
 
 
 .notecard {
-    border: 1px solid grey; /* #C2CAD0; */ /* #C2B9B0; */ /* #7E685A; */ /* #AFD275; */;;
+    background-color: #C2B9B0; /* #7E685A; */ /* #AFD275; */;;
+    border: 1px solid #C2B9B0;  /* #7E685A; */ /* #AFD275; */;;
 }
 
 .allNotes {
@@ -307,9 +331,27 @@ input {
     transform: scale(1);
 }
 
+#addNewNotesBtn {
+
+}
+
+
+#addNewNotesBtn > img {
+    width:7vw;
+ 
+    height: auto;
+}
+
+#addNewNotesBtn > img:hover {
+    animation-name: rotateSmall;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
 .addNewNotesBtn {
     background-color: transparent;
     border:none;
+    font-size: 2vh !important;
 }
 
 .addNewNotesBtn:hover {
@@ -378,7 +420,7 @@ input {
 }
 
 .plusToDo {
-    width: 8vh;
+    width: 6vh;
     margin:auto;
     height:auto;
 }
@@ -428,6 +470,11 @@ input {
     border: none;
     outline: none;
     background-color: transparent;
+}
+
+.addNewNotesBtn {
+    width:2vh;
+    height: auto;
 }
 
 #toDoCancelBtn:hover {
@@ -488,6 +535,10 @@ input {
     text-align: center;
     margin:auto;
 }
+.deleteicon {
+    height:2.5vh;
+    width:auto;
+}
 
 .deleteicon:hover {
     transform: scale(1.1);
@@ -497,3 +548,6 @@ input {
 .editicon:hover {
     transform: scale(1.1);
 }
+
+@media screen and (max-width: 600x) {
+  }
